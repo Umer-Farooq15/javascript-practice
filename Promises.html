@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //callback hell
+        // getData(function(data) {
+        //     processData(data, function(result) {
+        //         updateUI(result, function() {
+        //             console.log("update UI")
+        //         });
+        //     });
+        // });
+        // getData();
+
+        //using promisses
+        getData()
+        .then(processData)
+        .then(updateUI)
+        .catch(function(error) {
+            console.error('An error occurred:', error);
+        });
+    </script>
+</body>
+</html>
